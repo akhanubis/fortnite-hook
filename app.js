@@ -15,7 +15,7 @@ const players = [
   "Juanso871",
   "ramanujans",
   "manquito"
-];
+]
 
 const sizes = [20, 6, 6, 6, 6, 6, 6, 9, 9, 9]
 const headers = ['Player', 'K-D', 'K-D 1d', 'K-D 7d', 'K/D', 'K/D 1d', 'K/D 7d', 'Wins', 'Wins 1d', 'Wins 7d']
@@ -55,6 +55,8 @@ delta_to_table = (d_0, d_1, d_7) => {
 }
 
 player_data_to_row = (d0, d1, d7) => {
+  if (!(d1 && d7))
+    return `\n|${ padded_cell(d0.player, 0) }Not enough data|`
   let delta_k_1d = d0.all.kills - d1.all.kills,
       delta_k_7d = d0.all.kills - d7.all.kills,
       delta_d_1d = d0.all.deaths - d1.all.deaths,
