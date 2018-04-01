@@ -13,7 +13,8 @@ const players = [
   "JoacoM24",
   "Jorninos94",
   "Juanso871",
-  "ramanujans"
+  "ramanujans",
+  "manquito"
 ];
 
 const sizes = [20, 6, 6, 6, 6, 6, 6, 9, 9, 9]
